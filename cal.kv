@@ -1,0 +1,140 @@
+<Button>:
+  markup: True
+  font_size: 30
+
+<MyGrid>:
+  ip: ip
+  op: op
+  GridLayout:
+    size: root.width, root.height
+    cols: 1
+    Label:
+      text: "Smart Calculator Of Sandipan"
+      size_hint_y:0.1
+    TextInput:
+      id: ip 
+      multiline: True
+      size_hint_y:0.3
+      disabled: True
+    TextInput:
+      id: op
+      multiline: False
+      size_hint_y:0.1
+      disabled: True
+    GridLayout:
+      cols: 6
+      Button:
+        text: "sin"
+        on_press: root.print_same("sin(")
+      Button:
+        text: "cos"
+        on_press: root.print_same("cos(")
+      Button:
+        text: "tan"
+        on_press: root.print_same("tan(")
+      Button:
+        text: "sin[sup]-1[/sup]"
+        on_press: root.print_same("asin(")
+      Button:
+        text: "cos[sup]-1[/sup]"
+        on_press: root.print_same("acos(")
+      Button:
+        text: "tan[sup]-1[/sup]"
+        on_press: root.print_same("atan(")
+      Button:
+        text: "ln(x)"
+        on_press: root.print_same("log(")
+        font_size:25
+      Button:
+        text:  "log10(x)"
+        on_press: root.print_same("log10(")
+        font_size:25
+      Button:
+        text: "ROOT(x)"
+        on_press: root.print_same("sqrt(")
+        font_size:25
+      Button:
+        text: "^"
+        on_press: root.print_same("**")
+      Button:
+        text: "("
+        on_press: root.print_same("(")
+      Button:
+        text: ")"
+        on_press: root.print_same(")")
+      Button:
+        text: "7"
+        on_press: root.print_same("7")
+      Button:
+        text:"8"
+        on_press: root.print_same("8")
+      Button:
+        text:"9"
+        on_press: root.print_same("9")
+      Button:
+        text:"@"
+        on_press: root.send_mail()
+      Button:
+        text:"<-"
+        on_press: root.backspace()
+      Button:
+        text:"[b]C[/b]"
+        on_press: root.clear_all()
+      Button:
+        text:"6"
+        on_press: root.print_same("6")
+      Button:
+        text:"5"
+        on_press: root.print_same("5")
+      Button:
+        text:"4"
+        on_press: root.print_same("4")
+      Button:
+        text:"+"
+        on_press: root.print_same("+")
+      Button:
+        text:"-"
+        on_press: root.print_same("-")
+      Button:
+        text:"*"
+        on_press: root.print_same("*")
+      Button:
+        text:"1"
+        on_press: root.print_same("1")
+      Button:
+        text:"2"
+        on_press: root.print_same("2")
+      Button:
+        text:"3"
+        on_press: root.print_same("3")
+      Button:
+        text:","
+        on_press: root.print_same(",")
+      Button:
+        text:"WebSearch"
+        on_press: root.web_search()
+        font_size: 22
+      Button:
+        text:"/"
+        on_press: root.print_same("/")
+      Button:
+        text:"0"
+        on_press: root.print_same("0")
+      Button:
+        text:"."
+        on_press: root.print_same(".")
+      Button:
+        text:"degree"
+        on_press: root.print_same("*deg")
+        font_size:25
+      Button:
+        text:"rand(x,y)"
+        on_press: root.print_same("rand(")
+        font_size:25
+      Button:
+        text:"π"
+        on_press: root.print_same("π")
+      Button:
+        text:"Ans."
+        on_press: root.calculate_answer()
+
